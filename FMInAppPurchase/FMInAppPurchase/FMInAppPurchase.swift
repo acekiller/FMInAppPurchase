@@ -83,7 +83,7 @@ public extension FMInAppPurchase {
      * :params: handle 传入的值String：为方法配置的key值回传。
      */
 
-    public func addPayStatusHandle(handle: @escaping (String,PayStatus)->Void, for key:String) {
+    public func appendPayStatusHandle(_ handle: @escaping (String,PayStatus)->Void, for key:String) {
         payStatusHandles[key] = handle
     }
     
@@ -98,7 +98,11 @@ public extension FMInAppPurchase {
     }
     
     public var firstTransaction: SKPaymentTransaction? {
-        return transactionContainer.firstTransaction()
+        return transactionContainer.firstTransaction
+    }
+    
+    public var firstPurchasedTransaction: SKPaymentTransaction? {
+        return transactionContainer.firstPurchasedTransaction
     }
 }
 

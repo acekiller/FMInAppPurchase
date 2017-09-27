@@ -181,7 +181,11 @@ public extension FMIAPTransactionContainer {
             .first
     }
     
-    public func firstTransaction() -> SKPaymentTransaction? {
+    public var firstTransaction: SKPaymentTransaction? {
         return transactions.first
+    }
+    
+    public var firstPurchasedTransaction: SKPaymentTransaction? {
+        return transactions.filter({.purchased == $0.transactionState}).first
     }
 }
