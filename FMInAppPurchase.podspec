@@ -7,17 +7,16 @@ Pod::Spec.new do |s|
 
   s.homepage     = "https://github.com/acekiller/FMInAppPurchase"
 
-  s.license      = "MIT"
-  # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
+  s.license      = { :type => "MIT", :file => "LICENSE" }
 
   s.author             = { "acekiller" => "fengxijun51020@hotmail.com" }
 
-  # s.platform     = :ios, "8.0"
+  s.platform     = :ios, "8.0"
 
   s.source       = { :git => "https://github.com/acekiller/FMInAppPurchase.git", :tag => "#{s.version}" }
 
-  s.source_files  = "Classes", "FMInAppPurchase/FMInAppPurchase/**/*.{h,m}"
-  s.exclude_files = "Classes/Exclude"
+  s.source_files  = "Classes", "FMInAppPurchase/FMInAppPurchase/**/*.{swift}"
+  # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"
 
